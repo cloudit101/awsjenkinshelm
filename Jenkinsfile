@@ -14,7 +14,7 @@ pipeline {
                 sh '''
                    export PATH=$PATH:/usr/local/bin
                    export KUBECONFIG=/tmp/config
-                   awscred.sh $username $password
+                   ./awscred.sh $username $password
                    /usr/local/bin/kubectl get nodes
                    helm ls
                    '''
