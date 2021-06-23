@@ -16,6 +16,7 @@ pipeline {
                    export KUBECONFIG=/tmp/config
                    ./awscred.sh $username $password
                    /usr/local/bin/kubectl get nodes
+                   helm install demorel1 ./demo
                    helm ls
                    '''
                   }
